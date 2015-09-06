@@ -1,4 +1,4 @@
-# Patchwire for GameMaker
+# Patchwire for GameMaker: Studio
 GameMaker client scripts for the Patchwire multiplayer server framework
 
 ## Installation
