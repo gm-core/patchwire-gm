@@ -72,3 +72,7 @@ net_cmd_send();
 ```
 
 That is all you need to do in order to send a command to the server. You can add as much or as little data to the command as you like.
+
+## Contributing
+
+If you would like to contribute to this repository, make you changes to the scripts in the `src` folder and create a pull request explaining your changes. A test suite will be coming soon using [Gamatas](https://github.com/twisterghost/gamatas) which will be run before merging pull requests. Until then, manual tests will be run on your branch.
