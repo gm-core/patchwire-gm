@@ -1,9 +1,10 @@
-// Applies the handler function to the given command data as received from the server.
-// arg0 - The command to handle
-// arg1 - The command payload ds_map from the server
+/// @desc Applies the handler function to the given command data as received from the server.
+/// @param {String} CommandType
+/// @param {ds_map} CommandData
+/// Note: This is for internal use in Patchwire
 
-if (ds_map_exists(global.netHandlerMap, argument0)) {
-    var handlerList = ds_map_find_value(global.netHandlerMap, argument0);
+if (ds_map_exists(global.patchwire_netHandlerMap, argument0)) {
+    var handlerList = ds_map_find_value(global.patchwire_netHandlerMap, argument0);
     
     var handlerListLength = array_length_1d(handlerList);
     

@@ -1,4 +1,5 @@
-// Reads data from async_load and returns a map of the data sent from the server.
+/// @desc Reads data from async_load and returns a map of the data sent from the server.
+/// Note: This is for internal use in Patchwire
 
 var netResponseType = ds_map_find_value(async_load, "type");
 

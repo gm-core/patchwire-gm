@@ -1,4 +1,4 @@
-// Initializes the net system.
+/// @desc Initializes the net system.
 
-global.netSock = network_create_socket(network_socket_tcp);
-global.netHandlerMap = ds_map_create();
+global.patchwire_netSock = network_create_socket(network_socket_tcp);
+global.patchwire_netHandlerMap = ds_map_create();

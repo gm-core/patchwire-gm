@@ -1,5 +1,5 @@
-// Connects to a server via a socket.
-// arg0 - IP of the server
-// arg1 - Port of the server
+/// @desc Connects to a server via a socket.
+/// @param {String} ServerIP
+/// @param {Real} ServerPort
 
-network_connect_raw(global.netSock, argument0, argument1);
+network_connect_raw(global.patchwire_netSock, argument0, argument1);

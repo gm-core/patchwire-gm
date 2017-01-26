@@ -1,5 +1,5 @@
-// Reads through registered handlers and runs them if it finds a command match.
-// Call this on a network management object in it's Networking event.
+/// @desc Reads through registered handlers and runs them if it finds a command match.
+/// Note: Call this on a network management object in it's Networking event.
 
 var netResponse = net_cmd_parse();
 
@@ -25,4 +25,4 @@ if (netResponse >= 0) {
 
 }
 
-net_cmd_read_end(netResponse);
+ds_map_destroy(netResponse)
