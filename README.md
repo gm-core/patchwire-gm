@@ -83,4 +83,4 @@ That is all you need to do in order to send a command to the server. You can add
 For more documentation, see:
 
 * [Patchwire-GM Wiki](https://github.com/twisterghost/patchwire-gm/wiki)
-* [Patchwire](https://github.com/twisterghost/patchwire);
+* [Patchwire](https://github.com/twisterghost/patchwire)
