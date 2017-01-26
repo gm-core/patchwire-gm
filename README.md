@@ -1,6 +1,8 @@
 # Patchwire for GameMaker: Studio
 GameMaker client scripts for the Patchwire multiplayer server framework
 
+Version 2.0.0
+
 ## Installation
 
 1. Download the latest release of Patchwire-GM 
