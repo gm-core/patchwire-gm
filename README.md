@@ -1,7 +1,7 @@
 # Patchwire for GameMaker: Studio
 GameMaker client scripts for the Patchwire multiplayer server framework
 
-Version 1.0.0
+Version 1.1.0
 
 Compatible with [Patchwire 0.2.*](https://github.com/twisterghost/patchwire).
 

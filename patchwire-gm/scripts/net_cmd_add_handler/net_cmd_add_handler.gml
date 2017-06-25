@@ -14,3 +14,4 @@ if (ds_map_exists(global.patchwire_netHandlerMap, argument0)) {
     handlerList[0] = argument1;
     ds_map_add(global.patchwire_netHandlerMap, argument0, handlerList);
 }
+

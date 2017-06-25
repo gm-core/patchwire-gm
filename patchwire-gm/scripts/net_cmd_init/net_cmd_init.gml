@@ -4,3 +4,4 @@
 global.patchwire_netCurrentData = ds_map_create();
 ds_map_add(global.patchwire_netCurrentData, "command", argument0);
 return global.patchwire_netCurrentData;
+

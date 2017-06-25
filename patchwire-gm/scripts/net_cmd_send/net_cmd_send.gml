@@ -27,3 +27,4 @@ buffer_delete(buffer);
 if (argument_count <= 1 || !argument[1]) {
     ds_map_destroy(dataMap);
 }
+

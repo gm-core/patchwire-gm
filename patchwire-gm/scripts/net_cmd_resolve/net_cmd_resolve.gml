@@ -22,7 +22,17 @@ if (netResponse >= 0) {
         var command = ds_map_find_value(netResponse, "command");
         net_handle_command(command, netResponse);
     }
+    
+    if (ds_exists(netResponse, ds_type_map)) {
+        ds_map_destroy(netResponse);
+    }
 
+} else {
+    if (netResponse == NetEvent.ConnectFail) {
+        net_handle_command("connectFailed", "");
+    } else if (netResponse == NetEvent.Disconnect) {
+        net_handle_command("disconneded", "");
+    }
 }
 
-ds_map_destroy(netResponse)
+

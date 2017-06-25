@@ -13,3 +13,4 @@ if (ds_map_exists(global.patchwire_netHandlerMap, argument0)) {
         script_execute(handler, argument1);
     }
 }
+
