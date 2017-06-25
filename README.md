@@ -76,7 +76,7 @@ net_cmd_send(command);
 
 That is all you need to do in order to send a command to the server. You can add as much or as little data to the command as you like.
 
-> **NOTE:** If you don't provide the `command` value in `net_cmd_command`, Patchwire will just send whatever the most recently created command was.
+> **NOTE:** If you don't provide the `command` value in `net_cmd_init`, Patchwire will just send whatever the most recently created command was.
 
 # Docs
 
