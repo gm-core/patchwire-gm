@@ -84,3 +84,7 @@ For more documentation, see:
 
 * [Patchwire-GM Wiki](https://github.com/twisterghost/patchwire-gm/wiki)
 * [Patchwire](https://github.com/twisterghost/patchwire)
+
+## GM Core
+
+Patchwire-GM is a part of the [GM Core](https://github.com/gm-core) project.
