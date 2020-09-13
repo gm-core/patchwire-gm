@@ -1,2 +1,1 @@
-/// @description 
-net_cmd_resolve();
+net_resolve();

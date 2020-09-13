@@ -6,7 +6,7 @@
     "path": "folders/Scripts/patchwire.yy",
   },
   "resourceVersion": "1.0",
-  "name": "net_cmd_add_handler",
+  "name": "net_connection",
   "tags": [],
   "resourceType": "GMScript",
 }

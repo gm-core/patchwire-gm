@@ -6,7 +6,7 @@
     "path": "folders/Scripts/patchwire.yy",
   },
   "resourceVersion": "1.0",
-  "name": "net_init",
+  "name": "net_commands",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -1,13 +1,13 @@
 # Patchwire for GameMaker: Studio
 GameMaker client scripts for the Patchwire multiplayer server framework
 
-Version 1.1.0
+Version 2.0.0
 
-Compatible with [Patchwire 0.2.*](https://github.com/twisterghost/patchwire).
+Compatible with [Patchwire 0.5.*](https://github.com/twisterghost/patchwire).
 
 ## Installation
 
-Download the latest .zip [release](https://github.com/twisterghost/patchwire/releases) of Patchwire's scripts and add them into your GameMaker project.
+Download the latest .yymps [release](https://github.com/twisterghost/patchwire/releases) of Patchwire and import the local package. For detailed instructions, see [this guide](https://gmcore.io/installing.html)
 
 ## Usage
 
@@ -24,15 +24,18 @@ This will initialize the client networking and connect to the given Patchwire se
 ```GML
 // obj_network_manager - Create
 
-net_cmd_add_handler("connected", handle_connected);
+net_cmd_add_handler("connected", function(data) {
+  status = "Connected";
+  name = data[? "name"];
+});
 ```
 
 ```GML
 // obj_network_manager - Networking
-net_cmd_resolve();
+net_resolve();
 ```
 
-In the create event, we specify a handler script (`handle_connected`) for the `connected` command. In the networking event, we tell the Patchwire client to handle incoming commands. In this case, when the `connected` command is received, its contents will be sent to the `handle_connected` script, which can do whatever you please. `argument0` in the handler script will be the ID of a `ds_map` containing the data sent from the server.
+In the create event, we specify a handler function for the `connected` command. In the networking event, we tell the Patchwire client to handle incoming commands with `net_resolve()`. In this case, when the `connected` command is received, its contents will be sent to the provided function, which can do whatever you please. In this case, we're just setting some variables. The first parameter of the handler function will be a ds_map of data from the server. This map will be automatically destroyed after all handlers run.
 
 #### Writing command handler scripts
 
@@ -49,15 +52,13 @@ Lets use the example of writing a handler for a `chat` command from the server. 
 Patchwire will route this command into the handler, providing the command JSON as a `ds_map`, so we can handle it like this:
 
 ```GML
-// Script: handle_chat
-var data = argument0;
-var fromUser = data[? "user"];
-var message = data[? "message"];
+net_cmd_add_handler("chat", function(data) {
+  show_message(data[? "user"] + ': ' + data[? "message"]);
+});
 
-show_message(fromUser + ': ' + message);
 ```
 
-You do not need to handle deleting the data map after your handler script runs. Patchwire cleans it up for you.
+Again, you do not need to handle deleting the data map after your handler script runs. Patchwire cleans it up for you.
 
 #### Sending commands to the server
 
@@ -73,8 +74,6 @@ command[? "someKey"] = "someValue";
 // Send the command to the server
 net_cmd_send(command);
 ```
-
-That is all you need to do in order to send a command to the server. You can add as much or as little data to the command as you like.
 
 > **NOTE:** If you don't provide the `command` value in `net_cmd_init`, Patchwire will just send whatever the most recently created command was.
 
