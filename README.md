@@ -7,9 +7,15 @@ Compatible with [Patchwire 0.5.*](https://github.com/twisterghost/patchwire).
 
 ## Installation
 
-Download the latest .yymps [release](https://github.com/twisterghost/patchwire/releases) of Patchwire and import the local package. For detailed instructions, see [this guide](https://gmcore.io/installing.html)
+Download the latest .yymps [release](https://github.com/gm-core/patchwire-gm/releases) of Patchwire and import the local package. For detailed instructions, see [this guide](https://gmcore.io/installing.html)
 
 ## Usage
+
+Patchwire is great for simple online connectivity and centers around a paradigm of sending "commands" to and from a server. A command has a name and data associated with it. For example, consider a command called "chat" which has two pieces of data: the user that send the message, and the message.
+
+Your game would send a "chat" command to the [server](https://github.com/twisterghost/patchwire), which would see the command and handle it. Likely, the server would just broadcast the same command back to all other connected clients. Those clients would then have their own "chat" command handler.
+
+As such, most of the Patchwire API centers around creating, sending and receiving "commands". You will establish "command handlers" to handle incoming commands from the server, and you will send commands back out.
 
 #### Creating a network manager object
 
